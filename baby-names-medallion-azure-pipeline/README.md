@@ -46,18 +46,15 @@ text
 
 git clone https://github.com/sreenathreddypidapa/sreenathreddypidapa-azure-databricks-baby-names-etl.git
 cd azure-databricks-baby-names-etl
-Step 2: Configure Azure Resources
+
+### Step 2: Configure Azure Resources
 Create a Resource Group: baby-names-rg
-
 Create Storage Account: babynamesadls
-
 Enable hierarchical namespace
-
 Create containers: bronze, silver, gold
-
 Create Databricks Workspace: baby-names-databricks
 
-Step 3: Import Notebooks
+### Step 3: Import Notebooks
 Import the notebooks in this order:
 
 01_Bronze_Ingestion.py
