@@ -4,21 +4,18 @@
 An end-to-end data pipeline implementing the medallion architecture (Bronze-Silver-Gold) on Azure Databricks using the Baby Names dataset. This project demonstrates a complete data engineering workflow from raw data ingestion to interactive business dashboards.
 
 ##  Architecture
-┌─────────────────┐
-│ BRONZE LAYER │ Raw data ingestion with metadata
-└────────┬────────┘
+
+BRONZE LAYER │ Raw data ingestion with metadata
 ▼
-┌─────────────────┐
-│ SILVER LAYER │ Cleaned data with engineered features
-└────────┬────────┘
+
+SILVER LAYER │ Cleaned data with engineered features
 ▼
-┌─────────────────┐
-│ GOLD LAYER │ Business-ready aggregations
-└────────┬────────┘
+
+GOLD LAYER │ Business-ready aggregations
 ▼
-┌─────────────────┐
-│ DASHBOARD │ Interactive visualizations
-└─────────────────┘
+
+DASHBOARD │ Interactive visualizations
+
 
 text
 
@@ -46,7 +43,7 @@ text
 - Azure Data Lake Storage Gen2 account
 
 ### Step 1: Clone the Repository
-```bash
+
 git clone https://github.com/sreenathreddypidapa/azure-databricks-baby-names-etl.git
 cd azure-databricks-baby-names-etl
 Step 2: Configure Azure Resources
