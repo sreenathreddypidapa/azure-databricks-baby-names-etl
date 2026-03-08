@@ -48,6 +48,7 @@ git clone https://github.com/sreenathreddypidapa/sreenathreddypidapa-azure-datab
 cd azure-databricks-baby-names-etl
 
 ### Step 2: Configure Azure Resources
+
 Create a Resource Group: baby-names-rg
 Create Storage Account: babynamesadls
 Enable hierarchical namespace
@@ -55,25 +56,23 @@ Create containers: bronze, silver, gold
 Create Databricks Workspace: baby-names-databricks
 
 ### Step 3: Import Notebooks
+
 Import the notebooks in this order:
-
 01_Bronze_Ingestion.py
-
 02_Silver_Transformation.py
-
 03_Gold_Aggregations.py
 
-Step 4: Configure Storage Access
-In each notebook, add your storage key:
+### Step 4: Configure Storage Access
 
+In each notebook, add your storage key:
 python
 storage_account = "babynamesadls123"
 storage_key = "your-storage-key-here"
 spark.conf.set(f"fs.azure.account.key.{storage_account}.blob.core.windows.net", storage_key)
 
-Step 5: Run the Pipeline
-Execute notebooks sequentially. The cluster will auto-terminate after 120 minutes of inactivity.
+### Step 5: Run the Pipeline
 
+Execute notebooks sequentially. The cluster will auto-terminate after 120 minutes of inactivity.
 Key Insights
 Insight	Finding
 Top Female Name	MARY (1,035 in 1910)
@@ -84,33 +83,26 @@ Regional Leader	BROOKLYN
 
 🎯 Bronze Layer
 Raw data ingestion from Azure Data Lake Storage Gen2
-
 Added metadata: ingestion_timestamp, source_file
-
 Delta Lake format with ACID transactions
 
-Silver Layer
+🎯Silver Layer
 Data cleaning and standardization
-
 Feature engineering:
-
 name_length, name_category
-
 decade calculation
-
 era classification (EARLY_1900s, MID_CENTURY, etc.)
-
 region mapping
-
 Data quality validation (null checks, value ranges)
 
-Gold Layer Tables
+🎯Gold Layer Tables
 Table	Purpose	Records
 gold_top_names	Ranked names by decade	5
 gold_yearly_trends	Year-over-year metrics	4
 gold_gender_trends	Male vs female analysis	7
 gold_regional	Geographic distribution	2
 gold_name_popularity	All-time rankings	6
+
 🎯 Dashboard Visualizations
 Top Names by Decade: Bar chart showing top 5 names per decade
 
