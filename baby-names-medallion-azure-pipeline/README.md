@@ -44,7 +44,7 @@ text
 
 ### Step 1: Clone the Repository
 
-git clone https://github.com/sreenathreddypidapa/azure-databricks-baby-names-etl.git
+git clone https://github.com/sreenathreddypidapa/sreenathreddypidapa-azure-databricks-baby-names-etl.git
 cd azure-databricks-baby-names-etl
 Step 2: Configure Azure Resources
 Create a Resource Group: baby-names-rg
