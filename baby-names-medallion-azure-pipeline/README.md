@@ -111,15 +111,24 @@ Name Popularity: Bar chart of all-time top 10 names
 text
 ├── notebooks/
 │   ├── 01_Bronze_Ingestion.py      # Raw data ingestion
+
 │   ├── 02_Silver_Transformation.py # Data cleaning & features
+
 │   └── 03_Gold_Aggregations.py     # Business aggregations
+
 ├── dashboard/
+
 │   └── Baby_Names_Dashboard.html   # Interactive dashboard
 ├── screenshots/
+
 │   ├── bronze_layer.png
+
 │   ├── silver_layer.png
+
 │   ├── gold_layer.png
+
 │   └── dashboard.png
+
 └── README.md
 
 ## 🧪 Sample SQL Queries
